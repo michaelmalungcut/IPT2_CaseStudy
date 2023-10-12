@@ -68,26 +68,26 @@ public class calculator {
             case 'A':
             case 'a':
                 // Addition
-                result = number1 + number2;
+                result = add(number1, number2);
                 break;
                 
             case 'B':
             case 'b':
                 // Subtraction
-                result = number1 - number2;
+                result = sub(number1, number2);
                 break;
                 
             case 'C':
             case 'c':
                 // Multiplication
-                result = number1 * number2;
+                result = mult(number1, number2);
                 break;
                 
             case 'D':
             case 'd':
                 // Division
                 if (number2 != 0) {
-                    result = (double) number1 / number2;
+                    result = div(number1, number2);
                 } else {
                     System.out.println("Division by zero is not allowed.");
                 }
@@ -98,6 +98,26 @@ public class calculator {
 
         sc.close();
 
+    }
+
+    public static double add(int number1, int number2){
+        double result = number1 + number2;
+        return result;
+    }
+
+    public static double sub(int number1, int number2){
+        double result = number1 - number2;
+        return result;
+    }
+
+    public static double mult(int number1, int number2){
+        double result = number1 * number2;
+        return result;
+    }
+
+    public static double div(int number1, int number2){
+        double result = (double) number1 / number2;
+        return result;
     }
 
 }
